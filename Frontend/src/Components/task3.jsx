@@ -1,3 +1,4 @@
+// CRUD OPRATION WITH SEARCH AND SORTING
 import React from 'react'
 import { useState } from 'react';
 function task3() {
@@ -10,8 +11,7 @@ function task3() {
         if(!data.trim()){
             return;
         }
-        if(edit){
-           
+        if(edit){    
             setcreate(
                 create.map((item)=>
                     

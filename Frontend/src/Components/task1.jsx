@@ -14,7 +14,6 @@ function task2() {
             }
             return;
         }
-        // while(!refVal.current)
         refVal.current=setInterval(() => {
             setCount(prev=>{
                 if(prev===0 && direction===1) return 1

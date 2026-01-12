@@ -6,9 +6,9 @@ import Task3 from './Components/task3'
 function App() {
   return (
     <>
-      <Task1 />
+      {/* <Task1 />
       <Task2 />
-      <Task3 /> 
+      <Task3 />  */}
     </>
   )
 }
