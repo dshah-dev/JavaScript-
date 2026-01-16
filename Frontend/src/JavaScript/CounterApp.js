@@ -6,9 +6,9 @@
 // Optional - (if you can achive this , it would be great - disable decrease when value is 0)
 
 let count=0;
-let direction=1;
+let direction=0;
 let interval=null;
-let running=true;
+// let running=true;
 
 const startbtn =document.querySelector("#start");
 const backbtn =document.querySelector("#back");
@@ -19,22 +19,24 @@ const Counter =document.querySelector("#Counter");
 resetbtn.addEventListener("click",()=>{
     count=0;
     Counter.innerHTML=`Counter : ${count}`;
-    running=false;
+    // running=false;
     clearInterval(interval);
 })
 
 stopbtn.addEventListener("click",()=>{
-    running=false;
+    // running=false;
+    direction=0;
     clearInterval(interval);
 });
 
 
 startbtn.addEventListener("click",()=>{
     console.log("working");
-    running = true;
+    // running = true;
+    clearInterval(interval);
     direction=1;
     interval = setInterval(() => {
-        if(direction===1 && running===true){
+        if(direction===1){
             count++;
             Counter.innerHTML = `Counter : ${count}`;
         }
@@ -44,12 +46,13 @@ startbtn.addEventListener("click",()=>{
 
 backbtn.addEventListener("click",()=>{
     console.log("working");
-    running = true;
+    // running = true;
+    clearInterval(interval);
     direction=-1;
     interval = setInterval(() => {
         if(count<=0){
             return console.log("Already zero.");             
-        }else if(count>0 && direction === -1 && running===true){
+        }else if(count>0 && direction === -1 ){
             count--;
             Counter.innerHTML = `Counter : ${count}`;
         }

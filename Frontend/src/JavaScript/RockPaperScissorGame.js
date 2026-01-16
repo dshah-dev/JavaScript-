@@ -32,7 +32,7 @@ const playGame=(choiceId)=>{
     
     if(choiceId==compchoice){
         console.log("Draw");
-        msg.innerHTML("Draw");
+        msg.innerHTML="Draw";
     }else{
         let userwin=true;
         if(choiceId=="Rock"){
