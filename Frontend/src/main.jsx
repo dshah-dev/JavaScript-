@@ -10,9 +10,15 @@ import App from './App.jsx'
 // import "./JavaScript/RockPaperScissorGame.js"
 // import "./JavaScript/FetchAPI.js"
 // import "./JavaScript/CounterApp.js"
-import "./JavaScript/ToDoList.js"
+// import "./JavaScript/ToDoList.js"
+// import "./JavaScript/Classes/Instances-Prototype-Obj.js"
+// import "./JavaScript/Classes/Generator.js"
+// import "./JavaScript/Classes/closure.js"
+// import "./JavaScript/Classes/extends.js"
+import "./JavaScript/Classes/MIniTodoUsingClasses.js"
+// import "./JavaScript/Classes/Observer.js"
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+<StrictMode>
     <App />
   </StrictMode>,
 )
