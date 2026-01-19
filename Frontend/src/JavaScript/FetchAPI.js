@@ -22,16 +22,20 @@ reset.addEventListener("click", () => {
 
 
 const getdata1 = async()=>{
+  try{
     para.innerHTML="";
     console.log("getting data");
-    let res =await fetch(url);
+    const res =await fetch(url);
     console.log(res);
-    let data = await res.json();
+    const data = await res.json();
     data.forEach(e => {
-        const p = document.createElement("p");
-        p.textContent=`Name : ${e.name} Email : ${e.email}`;
-        para.appendChild(p);
+      const p = document.createElement("p");
+      p.textContent=`Name : ${e.name} Email : ${e.email}`;
+      para.appendChild(p);
     });
+  }catch{
+    console.error(error);
+  }
 } 
 
 asyncBtn.addEventListener("click",getdata1);
@@ -54,13 +58,14 @@ function getdata2(){
       
       });
       })
+      
 }
 
 promiseBtn.addEventListener("click",getdata2);
 
 
 // using callback
-function hendleData(data){
+function handleData(data){
   data.forEach(e => {
         const p = document.createElement("p");
         p.textContent=`Name : ${e.name} Email : ${e.email}`;
@@ -71,7 +76,8 @@ function getdata3(){
   para.innerHTML="";
     fetch(url)
     .then(res=>res.json())
-    .then(data => hendleData(data))
+    .then(data => handleData(data))
+    .catch(error);
 }
 
 callbackBtn.addEventListener("click",getdata3);
