@@ -1,0 +1,17 @@
+there are three pahses ,
+1 Mounting ,2 updating ,3 unmounting
+
+componentDidMount() → runs after component mounts (fetch API here) / Birth of components / 
+
+componentDidUpdate(prevProps, prevState) → runs after update
+
+componentWillUnmount() → cleanup before removal
+
+**Order of execution
+constructor()
+↓
+static getDerivedStateFromProps()
+↓
+render()
+↓
+componentDidMount()

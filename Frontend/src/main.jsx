@@ -15,7 +15,7 @@ import App from './App.jsx'
 // import "./JavaScript/Classes/Generator.js"
 // import "./JavaScript/Classes/closure.js"
 // import "./JavaScript/Classes/extends.js"
-import "./JavaScript/Classes/MIniTodoUsingClasses.js"
+// import "./JavaScript/Classes/MIniTodoUsingClasses.js"
 // import "./JavaScript/Classes/Observer.js"
 createRoot(document.getElementById('root')).render(
 <StrictMode>
