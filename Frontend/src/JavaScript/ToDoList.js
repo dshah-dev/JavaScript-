@@ -2,23 +2,23 @@ const para = document.querySelector("#para");
 const input = document.querySelector("#input");
 const addBtn = document.querySelector("#addbtn");
 const list = document.querySelector("#list");
-let listlen=0;
-let todos = JSON.parse(localStorage.getItem("todos")) || [];
+// let listlen=0;
+const todos = JSON.parse(localStorage.getItem("todos")) || [];
 
-function savetodos() {
+function SaveTodos() {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-function removetodos(){
-    localStorage.removeItem("todos");
-}
+// function RemoveTodos(){
+//     localStorage.removeItem("todos");
+// }
 
 // function getdata(){
 //     localStorage.getItem(todos);
 // }
 
 function check(){
-    if(listlen===0){
+    if(todos.length === 0){
         para.textContent="No todo yet"
     }else{
         para.textContent=""
@@ -27,7 +27,7 @@ function check(){
 
 check();
 addBtn.addEventListener("click",()=>{
-    if(listlen>=0 && input.value !== "" ){
+    if(todos.length>=0 && input.value !== "" ){
         console.log(`You added ${input.value} in to do list`);
         
         const li = document.createElement("li");
@@ -54,13 +54,13 @@ addBtn.addEventListener("click",()=>{
         todos.push(input.value);
         input.value = "";
         listlen++;
-        savetodos();
+        SaveTodos();
 
         deleteBtn.addEventListener("click", () => {
             li.remove();
             listlen--;
             check();
-            // removetodos();
+            // RemoveTodos();
         });
 
         editBtn.addEventListener("click", () => {
@@ -68,7 +68,7 @@ addBtn.addEventListener("click",()=>{
             if (newValue && newValue.trim() !== "") {
             innerpara.textContent = newValue;
             }
-            // savetodos();
+            // SaveTodos();
         });
 
     }else if(input.value === ""){
