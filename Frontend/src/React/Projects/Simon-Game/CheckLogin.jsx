@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SimonGame from "./SimonGame";
-import SimonLogin from "./SimonLogin";
+import SimonLogin from "./forms/SimonLogin";
 import Navebar from "./Navebar";
 
 function CheckLogin() {
