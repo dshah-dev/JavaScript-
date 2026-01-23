@@ -22,6 +22,7 @@ function SimonGame() {
     setGamePattern([]);
     setUserPattern([]);
     setTimeout(nextSequence, 300);
+
   };
 
   useEffect(() => {
